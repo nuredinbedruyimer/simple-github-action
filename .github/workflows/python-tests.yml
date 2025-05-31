@@ -28,6 +28,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Show Python version
+        run: python --version
+
+      - name: Show pip version
+        run: pip --version
+
+      - name: Show pytest version
+        run: pytest --version
+
       - name: Run tests with pytest
-        run: |
-          pytest
+        run: pytest
